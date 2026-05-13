@@ -1,0 +1,14 @@
+# MDBook build output — generated, not committed
+book/
+
+# macOS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+# MDBook anchor artifacts
+src/*.md#*

@@ -1,0 +1,160 @@
+/* AI Systems Architect Book - Custom Theme */
+
+:root {
+  --content-max-width: 800px;
+  --sidebar-width: 300px;
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --sidebar-bg: #f0f0f0;
+  --sidebar-fg: #333;
+  --sidebar-active: #0066cc;
+  --heading-color: #111;
+  --link-color: #0066cc;
+  --code-bg: #f5f5f5;
+  --border-color: #e0e0e0;
+  --quote-bg: #f8f8f8;
+  --quote-border: #0066cc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --fg: #e0e0e0;
+    --sidebar-bg: #222;
+    --sidebar-fg: #ccc;
+    --sidebar-active: #66b3ff;
+    --heading-color: #f0f0f0;
+    --link-color: #66b3ff;
+    --code-bg: #2a2a2a;
+    --border-color: #333;
+    --quote-bg: #242424;
+    --quote-border: #66b3ff;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+h1 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--border-color);
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin-top: 1.4em;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-top: 1.2em;
+}
+
+blockquote {
+  background: var(--quote-bg);
+  border-left: 4px solid var(--quote-border);
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  border-radius: 0 8px 8px 0;
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--code-bg);
+  padding: 1em 1.2em;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+}
+
+th {
+  background: var(--code-bg);
+  font-weight: 600;
+  padding: 0.7em 1em;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+}
+
+td {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Chapter title styling */
+.chapter > h1:first-child {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/* Side by side comparison boxes */
+.comparison {
+  display: flex;
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+.comparison > div {
+  flex: 1;
+  padding: 1em;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--code-bg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.4em; }
+  
+  .comparison {
+    flex-direction: column;
+  }
+}

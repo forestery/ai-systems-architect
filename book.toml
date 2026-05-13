@@ -1,0 +1,39 @@
+[book]
+title = "AI 系统架构师"
+authors = ["Hermes × Human"]
+language = "zh-CN"
+description = "从 Agent 编排到软件工程的范式迁移——2026 年最稀缺角色的完整指南"
+multilingual = false
+src = "src"
+
+[output.html]
+mathjax-support = true
+git-repository-url = "https://github.com/hermes/ai-systems-architect"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/hermes/ai-systems-architect/edit/main/{path}"
+site-url = "/ai-systems-architect/"
+additional-css = ["theme/custom.css"]
+additional-js = ["theme/custom.js"]
+
+[output.html.playground]
+editable = true
+copyable = true
+copy-js = true
+line-numbers = true
+
+[output.html.search]
+enable = true
+limit-results = 20
+teaser-word-count = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+
+[output.html.fold]
+enable = true
+level = 1
+
+# No redirects — use SUMMARY ordering
+
+[preprocessor]
