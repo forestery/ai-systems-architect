@@ -20,9 +20,14 @@
 
 ---
 
+- [第 9 章 · 我搞砸的那些事](chapter_09.md)
+
+---
+
 - [附录 A · 术语表](appendix_a.md)
 - [附录 B · 参考文献与延伸阅读](appendix_b.md)
 - [附录 C · Agent 编排工具对比](appendix_c.md)
 - [附录 D · 番外篇：Agentic 软件工程的未来](appendix_d.md)
 - [附录 E · 关于本书的说明](appendix_e.md)
+- [附录 F · 12 个月转型计划](appendix_f.md)
 - [关于作者](about.md)
