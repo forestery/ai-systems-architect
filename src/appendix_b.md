@@ -11,8 +11,9 @@
 2. **Google**, *2025 DORA Report (DevOps Research and Assessment)*, 2025.
    → AI 采用与质量指标的相关性数据。本书第 7 章的核心证据。
 
-3. **Gartner**, *AI Process Orchestration Predictions*, 2025-2026.
-   → 「90% 工程师转向 AI 流程编排」的预测来源。
+3. **Gartner**, *Gartner Identifies the Top Strategic Trends in Software Engineering for 2025 and Beyond*, Jul 2025.
+   → https://www.gartner.com/en/newsroom/press-releases/2025-07-01-gartner-identifies-the-top-strategic-trends-in-software-engineering-for-2025-and-beyond
+   → 「到 2028 年，90% 的企业软件工程师将使用 AI 代码助手」的预测来源。
 
 ---
 
@@ -22,8 +23,9 @@
    → https://mikemason.ca/writing/ai-coding-agents-jan-2026/
    → 对多 Agent 协调问题的深度分析。层级化编排的必要性论证。
 
-5. **Steve Yegge**, *Gas Town, Beads, and the Rise of Agentic Development*, 2026.
-   → https://github.com/steveyegge/gastown
+5. **Steve Yegge**, *Gas Town Emergency User Manual*, Jan 2026.
+   → https://steve-yegge.medium.com/gas-town-emergency-user-manual-cf0e4556d74b
+   → Repo: https://github.com/gastownhall/gastown
    → 最激进的多 Agent 实验的完整文档。
 
 6. **Cursor Engineering Team**, *Building FastRender: Lessons from Multi-Agent Architecture*, 2026.
@@ -61,18 +63,17 @@
     → https://hivetrail.com/blog/anthropic-2026-agentic-coding-report/
     → Anthropic 报告的社区解读。
 
-14. **Tessl**, *8 Agentic Coding Trends Shaping Software Engineering in 2026*, Feb 2026.
-    → https://tessl.io/blog/8-trends-shaping-software-engineering-in-2026
-
-15. **Programming Helper Tech**, *AI Autonomous Code Generation 2026*, 2026.
+14. **Rakuten**, *Rakuten Accelerates Development with Claude Code*, 2026.
+    → https://claude.com/customers/rakuten
+    → 7 小时自主编码、99.9% 精度、24天→5天的数据来源。
 
 ---
 
 ## 工具生态
 
-16. **Claude Code** (Anthropic) — Agentic coding CLI
-17. **OpenAI Codex** — Agentic coding with /goal feature
-18. **OpenCode** — Multi-agent PR review
-19. **Hermes Agent** — Orchestrator-Worker with delegate_task
-20. **Qdrant** — Vector database for semantic context retrieval
-21. **bge-m3** — Multilingual embedding model for semantic search
+15. **Claude Code** (Anthropic) — Agentic coding CLI
+16. **OpenAI Codex** — Agentic coding with /goal feature
+17. **OpenCode** — Multi-agent PR review
+18. **Hermes Agent** — Orchestrator-Worker with delegate_task
+19. **Qdrant** — Vector database for semantic context retrieval
+20. **bge-m3** — Multilingual embedding model for semantic search
