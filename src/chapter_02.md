@@ -30,9 +30,9 @@
 
 ---
 
-## 2.2 Orchestrator-Worker：最通用的起点
+## 2.2 编排器—工作者 (Orchestrator-Worker)：最通用的起点
 
-最简单的多 Agent 模式。一个 Orchestrator 负责拆任务、分任务、合结果。多个 Worker 各领一个子任务，在自己的上下文空间里独立执行。
+最简单的多 Agent 模式。一个编排器 (Orchestrator) 负责拆任务、分任务、合结果。多个工作者 (Worker) 各领一个子任务，在自己的上下文空间里独立执行。
 
 ```
 用户意图：「实现用户认证模块」
@@ -67,13 +67,13 @@ Orchestrator (编排者)
 
 ---
 
-## 2.3 Planner-Worker-Judge：Cursor 踩过的坑
+## 2.3 规划器—工作者—裁判 (Planner-Worker-Judge)：Cursor 踩过的坑
 
-Cursor 在 2025 年底构建 FastRender 浏览器时，面临的任务规模比典型的 Orchestrator-Worker 场景大得多。百万行代码库，多个独立模块，持续演进的需求。
+Cursor 在 2025 年底构建 FastRender 浏览器时，面临的任务规模比典型的编排器—工作者 (Orchestrator-Worker) 场景大得多。百万行代码库，多个独立模块，持续演进的需求。
 
-他们一开始试的就是 Orchestrator-Worker 的一个变体——平权 Agent。但连续失败了两次，然后收敛到一套完全不同的三层架构。
+他们一开始试的就是 Orchestrator-Worker 的一个变体——平权架构 (Peer-to-Peer Architecture)。但连续失败了两次，然后收敛到一套完全不同的三层架构。
 
-### 第一次失败：平权 Agent + 锁机制
+### 第一次失败：平权架构 (Peer-to-Peer) + 锁机制
 
 思路很直接：让多个 Agent 像人类开发者一样，用 Git 分支各自工作，通过文件锁协调对共享代码的访问。
 
@@ -174,6 +174,35 @@ Agent 没有让这个问题消失。Agent 让它更快暴露。
 **原则 4：任务 Spec 是你最重要的投资。** 不管用什么架构，Worker 的质量上限是它拿到的 spec 的质量上限。一个好的 spec 消除的不是歧义——是 Worker 脑补错误信息的空间。
 
 这四条原则不是从书里总结的。是从 Cursor 两次失败、Yegge 的数据库下线、以及每个在生产环境里跑过多 Agent 编排的人吃过的亏里总结的。
+
+```mermaid
+flowchart TB
+    subgraph OW["编排器—工作者 (Orchestrator-Worker)"]
+        O[Orchestrator] -->|task spec| W1[Worker]
+        O -->|task spec| W2[Worker]
+        O -->|task spec| W3[Worker]
+        W1 & W2 & W3 -->|result| O
+    end
+
+    subgraph PWJ["规划器—工作者—裁判 (Planner-Worker-Judge)"]
+        P[Planner] -->|plan| W4[Worker]
+        P -->|plan| W5[Worker]
+        W4 & W5 -->|output| J[Judge]
+        J -->|quality report| P
+    end
+
+    subgraph GT["Gas Town（角色化）"]
+        M[Mayor] -->|dispatch| PC1[Polecat]
+        M -->|dispatch| PC2[Polecat]
+        R[Refinery] -->|merge queue| M
+        D[Deacon] -->|escalation| OS[Overseer]
+    end
+
+    OW -->|"+Judge = PWJ"| PWJ
+    PWJ -->|"+Deacon/Overseer = GT"| GT
+```
+
+> **图 2-1**：三种架构的演进关系。从最简单的 OW 到加入质量裁判的 PWJ，再到加入异常升级的 Gas Town——复杂度递增，但共享四条底层原则。
 
 ---
 
