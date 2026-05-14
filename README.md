@@ -1,8 +1,8 @@
-# 🤖 AI 系统架构师
+# 《代码之后：成为 AI 系统架构师》
 
-> **从 Agent 编排到软件工程的范式迁移**
+> **After Code: Becoming an AI Systems Architect**
 >
-> *AI Systems Architect: From Agent Orchestration to the Next Paradigm of Software Engineering*
+> 从 Agent 编排到软件工程的范式迁移
 
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-blue.svg)](LICENSE)
 [![MDBook](https://img.shields.io/badge/MDBook-Online-green)](https://hermes.github.io/ai-systems-architect/)

@@ -190,7 +190,7 @@ AI Systems Architect = Agent 编排架构的设计者
 
 ---
 
-> *《AI 系统架构师》在 GitHub 开源更新。如果你想要 Agent 编排模板的持续更新、Context Engineering 最佳实践的定期推送、以及一个在走同一条路的实践社区——Star 本仓库，后续信息会通过仓库通知。*
+> *《代码之后》在 GitHub 开源更新。如果你想要 Agent 编排模板的持续更新、Context Engineering 最佳实践的定期推送、以及一个在走同一条路的实践社区——Star 本仓库，后续信息会通过仓库通知。*
 >
 > *微信读书版本同步准备中。*
 
