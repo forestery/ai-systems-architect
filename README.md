@@ -108,5 +108,5 @@ mdbook serve --open
   <br>
   <em>多 Agent 编程没有脱离软件工程，但它正在改变我们对「构建软件」的理解。</em>
   <br><br>
-  <strong>你不会因为 Agent 而失去工作。<br>你会因为拒绝学习编排 Agent 而失去工作。</strong>
+  <strong>编程不只是写代码。验证也是编程。</strong>
 </p>
