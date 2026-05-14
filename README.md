@@ -4,6 +4,10 @@
 >
 > 从 Agent 编排到软件工程的范式迁移
 
+<p align="center">
+  <img src="src/images/cover.jpg" alt="代码之后" width="400">
+</p>
+
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-blue.svg)](LICENSE)
 [![MDBook](https://img.shields.io/badge/MDBook-Online-green)](https://forestery.github.io/ai-systems-architect/)
 [![Stars](https://img.shields.io/github/stars/forestery/ai-systems-architect?style=social)](https://github.com/forestery/ai-systems-architect)

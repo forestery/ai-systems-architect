@@ -1,5 +1,9 @@
 # 序言：一封来自 2026 年的信
 
+<p align="center">
+  <img src="images/cover.jpg" alt="代码之后" width="380">
+</p>
+
 ---
 
 亲爱的工程师朋友：
