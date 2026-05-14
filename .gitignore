@@ -13,3 +13,4 @@ output/
 .idea/
 # MDBook anchor artifacts
 src/*.md#*
+src/https:
