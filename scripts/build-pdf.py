@@ -13,7 +13,7 @@ OUT_DIR.mkdir(exist_ok=True)
 # Chapter order (matches SUMMARY.md)
 CHAPTERS = [
     "序言：一封来自 2026 年的信",
-    "第 1 章 · 当 Agent 开始写代码", 
+    "第 1 章 · 当 Agent 开始写代码",
     "第 2 章 · 多 Agent 协同的架构模式",
     "第 3 章 · 范式革命还是框架内演进？",
     "第 4 章 · 角色坍缩：谁留下，谁消失",
@@ -37,7 +37,7 @@ name_to_file = {}
 for f in html_files:
     with open(f) as fh:
         content = fh.read(5000)
-    m = re.search(r'<title>(.+?)</title>', content)
+    m = re.search(r"<title>(.+?)</title>", content)
     if m:
         name_to_file[m.group(1)] = f.name
 
@@ -56,14 +56,36 @@ for ch_name in CHAPTERS:
 
 print(f"Found {len(chapter_htmls)}/{len(CHAPTERS)} chapters")
 
-# Read the main CSS from the book
-css_files = sorted(BOOK_HTML.glob("css/*.css"))
-css_content = ""
-for cssf in css_files:
-    css_content += cssf.read_text() + "\n"
+# Read CSS from the built book
+css_parts = []
 
-# Add print-specific CSS
+# 1. Book CSS (variables, general, chrome, print)
+for cssf in sorted(BOOK_HTML.glob("css/*.css")):
+    css_parts.append(f"/* {cssf.name} */\n{cssf.read_text()}")
+
+# 2. Custom theme CSS
+custom_css = BOOK_DIR / "theme" / "custom.css"
+if custom_css.exists():
+    css_parts.append(f"/* custom.css */\n{custom_css.read_text()}")
+
+css_content = "\n".join(css_parts)
+
+# Add print-specific and CJK font CSS
 print_css = """
+/* === CJK font stack === */
+html, body {
+    font-family: "Noto Sans SC", "Source Han Sans SC", "WenQuanYi Micro Hei",
+                 "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Sans SC", "Source Han Sans SC", "WenQuanYi Micro Hei",
+                 "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif !important;
+}
+code, pre {
+    font-family: "Noto Sans Mono SC", "Fira Code", "Consolas", monospace !important;
+}
+
+/* === Print layout === */
 @media print {
   body { font-size: 11pt; line-height: 1.6; }
   .chapter { page-break-before: always; }
@@ -76,11 +98,14 @@ print_css = """
 }
 """
 
-# Build concatenated HTML
+# Build concatenated HTML with <base> for correct relative path resolution
+base_url = BOOK_HTML.as_uri() + "/"
+
 full_html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<base href="{base_url}">
 <title>代码之后：成为 AI 系统架构师</title>
 <style>
 {css_content}
@@ -95,12 +120,17 @@ for hf in chapter_htmls:
     filepath = BOOK_HTML / hf
     content = filepath.read_text()
     # Extract body content (between <body> and </body>)
-    m = re.search(r'<body[^>]*>(.*?)</body>', content, re.DOTALL)
+    m = re.search(r"<body[^>]*>(.*?)</body>", content, re.DOTALL)
     if m:
         body = m.group(1)
         # Remove nav/sidebar elements
-        body = re.sub(r'<nav[^>]*>.*?</nav>', '', body, flags=re.DOTALL)
-        body = re.sub(r'<div[^>]*class="[^"]*sidebar[^"]*".*?</div>', '', body, flags=re.DOTALL)
+        body = re.sub(r"<nav[^>]*>.*?</nav>", "", body, flags=re.DOTALL)
+        body = re.sub(
+            r'<div[^>]*class="[^"]*sidebar[^"]*".*?</div>',
+            "",
+            body,
+            flags=re.DOTALL,
+        )
         full_html += body + "\n"
 
 full_html += "</body>\n</html>"
@@ -113,7 +143,12 @@ print(f"Combined HTML: {combined_path} ({len(full_html)} chars)")
 # Print to PDF using headless Chromium (try multiple binary names)
 pdf_path = OUT_DIR / "代码之后-AI系统架构师.pdf"
 
-chromium_bins = ["chromium-browser", "chromium", "google-chrome", "google-chrome-stable"]
+chromium_bins = [
+    "chromium-browser",
+    "chromium",
+    "google-chrome",
+    "google-chrome-stable",
+]
 chromium = None
 for b in chromium_bins:
     if subprocess.run(["which", b], capture_output=True).returncode == 0:
@@ -124,12 +159,20 @@ if not chromium:
     print("  ⚠  No Chromium found, skipping PDF")
     sys.exit(0)
 
-result = subprocess.run([
-    chromium, "--headless", "--disable-gpu",
-    "--no-sandbox", "--no-pdf-header-footer",
-    f"--print-to-pdf={pdf_path}",
-    f"file://{combined_path}"
-], capture_output=True, text=True, timeout=120)
+result = subprocess.run(
+    [
+        chromium,
+        "--headless",
+        "--disable-gpu",
+        "--no-sandbox",
+        "--no-pdf-header-footer",
+        f"--print-to-pdf={pdf_path}",
+        f"file://{combined_path}",
+    ],
+    capture_output=True,
+    text=True,
+    timeout=120,
+)
 
 if result.returncode == 0:
     size_kb = pdf_path.stat().st_size / 1024
