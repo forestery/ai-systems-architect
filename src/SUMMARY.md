@@ -36,5 +36,5 @@
 
 # 下载离线版
 
-- [📖 EPUB 电子书](downloads/代码之后-AI系统架构师.epub)
-- [📄 PDF 打印版](downloads/代码之后-AI系统架构师.pdf)
+- [📖 EPUB 电子书](https://forestery.github.io/ai-systems-architect/downloads/代码之后-AI系统架构师.epub)
+- [📄 PDF 打印版](https://forestery.github.io/ai-systems-architect/downloads/代码之后-AI系统架构师.pdf)
