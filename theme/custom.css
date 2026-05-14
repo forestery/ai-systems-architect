@@ -158,3 +158,129 @@ a:hover {
     flex-direction: column;
   }
 }
+
+/* ===== 番外篇 Appendix D 专用样式 ===== */
+
+/* Card Grid — 三个根本性新问题 */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 1.5em 0;
+}
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1em 1.1em;
+}
+
+.card-num {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--heading-color);
+}
+
+.card-body {
+  font-size: 14px;
+  color: var(--fg);
+  opacity: 0.85;
+  line-height: 1.65;
+}
+
+/* Core conclusion card */
+.card:last-child {
+  border-color: var(--quote-border);
+  background: var(--quote-bg);
+}
+
+/* Callout — 三条路径 */
+.callout {
+  background: var(--quote-bg);
+  border-left: 3px solid var(--quote-border);
+  padding: 1em 1.25em;
+  margin: 1.2em 0;
+  font-size: 15px;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.75;
+}
+
+.callout strong {
+  color: var(--heading-color);
+}
+
+/* Roadmap — 范式迁移路线图 */
+.roadmap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin: 1.5em 0;
+}
+
+.roadmap-card {
+  background: var(--bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.roadmap-phase {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 6px;
+}
+
+.roadmap-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--heading-color);
+}
+
+.roadmap-body {
+  font-size: 13px;
+  color: var(--fg);
+  opacity: 0.8;
+  line-height: 1.65;
+}
+
+/* Closing Quote — 结语框 */
+.closing-quote {
+  background: var(--quote-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5em 1.75em;
+  margin: 2em 0 0;
+  font-size: 16px;
+  line-height: 1.85;
+  font-style: italic;
+}
+
+/* Dark mode adjustments for cards/roadmap */
+@media (prefers-color-scheme: dark) {
+  .card-num, .roadmap-phase {
+    color: #777;
+  }
+  
+  .card, .roadmap-card {
+    border-color: #333;
+  }
+}
+
+/* Mobile: stack cards and roadmap */
+@media (max-width: 640px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .roadmap { grid-template-columns: 1fr; }
+}

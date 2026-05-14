@@ -23,4 +23,5 @@
 - [附录 A · 术语表](appendix_a.md)
 - [附录 B · 参考文献与延伸阅读](appendix_b.md)
 - [附录 C · Agent 编排工具对比](appendix_c.md)
+- [附录 D · 番外篇：Agentic 软件工程的未来](appendix_d.md)
 - [关于作者](about.md)
