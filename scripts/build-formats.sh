@@ -17,10 +17,13 @@ CHAPTERS=(
   "chapter_06.md"
   "chapter_07.md"
   "chapter_08.md"
+  "chapter_09.md"
   "appendix_a.md"
   "appendix_b.md"
   "appendix_c.md"
   "appendix_d.md"
+  "appendix_e.md"
+  "appendix_f.md"
   "about.md"
 )
 

@@ -31,3 +31,10 @@
 - [附录 E · 关于本书的说明](appendix_e.md)
 - [附录 F · 12 个月转型计划](appendix_f.md)
 - [关于作者](about.md)
+
+---
+
+# 下载离线版
+
+- [📖 EPUB 电子书](downloads/代码之后-AI系统架构师.epub)
+- [📄 PDF 打印版](downloads/代码之后-AI系统架构师.pdf)
