@@ -7,9 +7,7 @@
 作者的背景跨越软件工程、产品设计和投资领域，正在亲身经历从「构建者」到「编排者」的转型过程。
 
 **联系作者**：
-- 📧 通过 GitHub Issues 讨论本书内容
-- 📚 微信读书：即将上线
-- 🔧 作者专栏/知识星球：即将开放（Star 本书仓库获取通知）
+- 📧 通过 [GitHub Issues](https://github.com/forestery/ai-systems-architect/issues) 讨论本书内容
 
 ---
 

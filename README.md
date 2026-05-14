@@ -81,19 +81,6 @@
 |------|------|------|
 | 📖 **在线阅读** | [forestery.github.io/ai-systems-architect](https://forestery.github.io/ai-systems-architect/) | 所有人 |
 | 📝 **Markdown 源码** | `src/` 目录 | 提交 PR 或自行编译 |
-| 📚 **微信读书** | 即将上线 | 移动端阅读 |
-
----
-
-## 深入实践？
-
-读完这本书，如果你想：
-
-- 🔧 获取 Agent 编排的实战模板和工具链配置
-- 📊 订阅 Context Engineering 最佳实践的持续更新
-- 🤝 加入 AI Systems Architect 的实践社区
-
-→ 请关注 **[作者专栏/知识星球]**（即将开放，Star 本仓库获取通知）
 
 ---
 
