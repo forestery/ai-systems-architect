@@ -34,7 +34,15 @@ jobs:
       - name: Build with mdBook
         run: mdbook build
 
-      - name: Upload artifact
+      - name: Build PDF & EPUB
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq pandoc
+          bash scripts/build-formats.sh
+          mkdir -p book/downloads
+          cp output/*.pdf output/*.epub book/downloads/
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./book

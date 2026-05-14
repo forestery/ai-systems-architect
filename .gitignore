@@ -1,5 +1,6 @@
 # MDBook build output — generated, not committed
 book/
+output/
 
 # macOS
 .DS_Store

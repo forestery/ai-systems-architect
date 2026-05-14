@@ -1,0 +1,13 @@
+---
+title: "代码之后：成为 AI 系统架构师"
+subtitle: "从 Agent 编排到软件工程的范式迁移"
+author: "forestery"
+date: "2026"
+lang: "zh-CN"
+toc: true
+toc-depth: 2
+cover-image: "src/images/cover.jpg"
+description: |
+  一本关于 AI 时代软件工程范式迁移的开源书籍，涵盖多 Agent 协同架构、
+  Context Engineering、AI Systems Architect 职业路径。
+rights: "CC BY 4.0"

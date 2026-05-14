@@ -1,0 +1,48 @@
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$]{ctexbook}
+
+$if(fontfamily)$
+\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+$else$
+\setCJKmainfont{AR PL SungtiL GB}
+\setCJKsansfont{WenQuanYi Zen Hei}
+\setCJKmonofont{WenQuanYi Zen Hei}
+$endif$
+
+\usepackage{fontspec}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+% Required by pandoc
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\usepackage{longtable,booktabs,array}
+\usepackage{multirow,makecell}
+\usepackage{wrapfig,float}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+}
+
+$if(title)$
+\title{$title$$if(subtitle)$\\\large{$subtitle$}$endif$}
+$endif$
+$if(author)$
+\author{$author$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+
+\begin{document}
+\maketitle
+$if(toc)$
+\tableofcontents
+$endif$
+
+$body$
+\end{document}

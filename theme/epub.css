@@ -1,0 +1,175 @@
+/* EPUB styles for 《代码之后：成为 AI 系统架构师》 */
+
+body {
+  font-family: "Noto Serif SC", "Source Han Serif SC", serif;
+  line-height: 1.8;
+  margin: 1.5em;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-top: 1.5em;
+  page-break-before: always;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 1.3em;
+}
+
+h3 {
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+p {
+  margin: 0.8em 0;
+  text-indent: 2em;
+}
+
+blockquote {
+  margin: 1em 1.5em;
+  padding: 0.8em 1em;
+  border-left: 3px solid #0066cc;
+  background: #f5f5f5;
+  font-style: italic;
+}
+
+blockquote p {
+  text-indent: 0;
+}
+
+code {
+  font-family: "Source Code Pro", monospace;
+  background: #f0f0f0;
+  padding: 0.15em 0.3em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #f5f5f5;
+  padding: 1em;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.85em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.9em;
+}
+
+th {
+  background: #f0f0f0;
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+}
+
+td {
+  padding: 0.4em 0.8em;
+  border-bottom: 1px solid #eee;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+/* Card grid for appendix D */
+.card-grid {
+  display: block;
+  margin: 1em 0;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.8em 1em;
+  margin: 0.5em 0;
+  page-break-inside: avoid;
+}
+
+.card-num {
+  font-size: 0.75em;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-weight: 700;
+  margin: 0.3em 0;
+}
+
+.card-body {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Roadmap */
+.roadmap {
+  display: block;
+  margin: 1em 0;
+}
+
+.roadmap-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.8em 1em;
+  margin: 0.5em 0;
+  page-break-inside: avoid;
+}
+
+.roadmap-phase {
+  font-size: 0.75em;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.roadmap-title {
+  font-weight: 700;
+  margin: 0.3em 0;
+}
+
+.roadmap-body {
+  font-size: 0.85em;
+  color: #555;
+}
+
+/* Closing quote */
+.closing-quote {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  background: #f9f9f9;
+  font-style: italic;
+}
+
+/* Cover page */
+img[src*="cover"] {
+  max-width: 60%;
+  display: block;
+  margin: 2em auto;
+}

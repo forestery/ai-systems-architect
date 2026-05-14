@@ -81,6 +81,7 @@
 |------|------|------|
 | 📖 **在线阅读** | [forestery.github.io/ai-systems-architect](https://forestery.github.io/ai-systems-architect/) | 所有人 |
 | 📝 **Markdown 源码** | `src/` 目录 | 提交 PR 或自行编译 |
+| 📥 **PDF / EPUB 下载** | [下载页面](https://forestery.github.io/ai-systems-architect/downloads/) | 离线阅读 |
 
 ---
 
