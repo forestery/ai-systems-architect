@@ -5,8 +5,8 @@
 > 从 Agent 编排到软件工程的范式迁移
 
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-blue.svg)](LICENSE)
-[![MDBook](https://img.shields.io/badge/MDBook-Online-green)](https://hermes.github.io/ai-systems-architect/)
-[![Stars](https://img.shields.io/github/stars/hermes/ai-systems-architect?style=social)](https://github.com/hermes/ai-systems-architect)
+[![MDBook](https://img.shields.io/badge/MDBook-Online-green)](https://forestery.github.io/ai-systems-architect/)
+[![Stars](https://img.shields.io/github/stars/forestery/ai-systems-architect?style=social)](https://github.com/forestery/ai-systems-architect)
 
 ---
 
@@ -75,7 +75,7 @@
 
 | 方式 | 链接 | 适合 |
 |------|------|------|
-| 📖 **在线阅读** | [hermes.github.io/ai-systems-architect](https://hermes.github.io/ai-systems-architect/) | 所有人 |
+| 📖 **在线阅读** | [forestery.github.io/ai-systems-architect](https://forestery.github.io/ai-systems-architect/) | 所有人 |
 | 📝 **Markdown 源码** | `src/` 目录 | 提交 PR 或自行编译 |
 | 📚 **微信读书** | 即将上线 | 移动端阅读 |
 
@@ -98,7 +98,7 @@
 本书采用 CC BY 4.0 许可。欢迎通过 Issue 和 PR 参与讨论和纠错。
 
 ```
-git clone https://github.com/hermes/ai-systems-architect.git
+git clone https://github.com/forestery/ai-systems-architect.git
 cd ai-systems-architect
 mdbook serve --open
 ```

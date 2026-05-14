@@ -8,9 +8,9 @@ src = "src"
 
 [output.html]
 mathjax-support = true
-git-repository-url = "https://github.com/hermes/ai-systems-architect"
+git-repository-url = "https://github.com/forestery/ai-systems-architect"
 git-repository-icon = "fa-github"
-edit-url-template = "https://github.com/hermes/ai-systems-architect/edit/main/{path}"
+edit-url-template = "https://github.com/forestery/ai-systems-architect/edit/main/{path}"
 site-url = "/ai-systems-architect/"
 additional-css = ["theme/custom.css"]
 additional-js = ["theme/custom.js"]
