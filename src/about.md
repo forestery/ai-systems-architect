@@ -42,3 +42,10 @@ Anthropic 的报告、Yegge 的实验、Cursor 的架构演进——这些信息
 *「飞机没有脱离物理定律，但它改变了我们对旅行的理解。」*
 >
 > *编程不只是写代码。验证也是编程。*
+
+---
+
+## 下载离线版
+
+- 📖 [EPUB 电子书](https://forestery.github.io/ai-systems-architect/downloads/代码之后-AI系统架构师.epub)
+- 📄 [PDF 打印版](https://forestery.github.io/ai-systems-architect/downloads/代码之后-AI系统架构师.pdf)
